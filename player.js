@@ -173,3 +173,11 @@ async function progresso() {
         progresso();
     }, 1000);
 }
+
+function openNav() {
+    document.getElementById("barra").style.display = "block";
+}
+
+function closeNav() {
+    document.getElementById("barra").style.display = "none";
+}
