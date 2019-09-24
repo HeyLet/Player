@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Moonwalk Player</title>
+    <script src="player.js"></script>
+    <link rel="./Player/Musicas/musicas">
+
+</head>
+
+<body>
+
+    <div class="container disp-flex">
+        <div id="top-bar">
+            <p>Moonwalk Player</p>
+            <img src="imagens/icons/Michael_Jackson.png" width="70px" height="70px">
+        </div>
+
+
+        <div id="barra" class="barra-lateral disp-flex">
+            <button style="border:none; background-color: white;" class="menu" onclick="menu()"><img src="imagens/icons/menu.svg"></button>
+            <div id='0' onclick="mudaMusica(this)">Red Hot Chili Peppers Snow (Hey oh)</div>
+            <div id='1' onclick="mudaMusica(this)">Shawn Mendes - Señorita Ft. Camila Cabello</div>
+            <div id='2' onclick="mudaMusica(this)">KVSH, Breno Rocha Feat. NoOne- Sede Pra Te Ver</div>
+            <div id='3' onclick="mudaMusica(this)">Não Vou Mentir</div>
+            <div id="4" onclick="mudaMusica(this)">She Will Be Loved</div>
+            <div id='5' onclick="mudaMusica(this)">This Love - Maroon 5</div>
+            <div id='6' onclick="mudaMusica(this)">Wish You Were Here</div>
+        </div>
+
+
+
+        <div class="album disp-flex">
+            <img id="capadoAlbum" src="Album/redhot.jpg" alt="">
+        </div>
+        <div class="info">
+            <h2 id="musicas">Red Hot Chili Peppers Snow (Hey oh) (HQ, HD Audio)</h2>
+        </div>
+
+
+
+        <div id="audiotime">
+            <audio id="player">
+              Your browser does not support the audio tag.
+            </audio>
+            <span id="timestart">0:00</span>
+            <progress id="barraProgresso" value="0" max="100" class="barra-progresso">
+            </progress>
+
+            <span id="timeend">0:00</span>
+            <div class="timebar">
+                <span id="time"></span></div>
+
+
+        </div>
+
+
+        <div id="audio">
+        </div>
+
+
+
+        <div class="barra-inferior disp-flex" style="align-items: center; position: absolute; bottom: 0px ">
+
+            <div class="btn-container">
+
+                <div class="btn">
+                    <button style="border:none; background-color: white;" id="repeat" onclick="repetir()"><img src="imagens/icons/repetir.png" width="35" height="35"></button>
+                </div>
+
+
+                <div class="btn3">
+                    <button style="border:none; background-color: white;" id="previous" onclick="anterior()"><img src="imagens/icons/anterior.png" width="35" height="35"></button>
+                </div>
+
+                <div class="btn5">
+                    <button style="border:none; background-color: white; display: block;" id="play1" onclick="play()"><img src="imagens/icons/play.png" width="60" height="60"></button>
+                </div>
+
+                <div class="btn0">
+                    <button style="border:none; background-color: white; display: none; " id="pause" onclick="pause()"><img src="imagens/icons/pause.png" width="35" height="35"></button>
+                </div>
+
+                <div class="btn4">
+                    <button style="border:none; background-color: white;" id="next" onclick="proximo()"><img src="imagens/icons/proximo.png" width="35" height="35"></button>
+                </div>
+
+                <div class="btn2">
+                    <button style="border:none; background-color: white;" id="shuffle" onclick="aleatorio()"><img src="imagens/icons/aleatorio.png" width="30" height="30"></button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+
+
+</html>
