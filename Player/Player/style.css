@@ -1,0 +1,140 @@
+    .container {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    
+    .barra-inferior {
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        font-size: 1.5rem;
+        background: #FFFFFF;
+        border: 3px solid #e0e0e0;
+        box-shadow: 0 4px 4px 2px #989898;
+        -moz-box-shadow: 0 4px 4px 2px #989898;
+        -webkit-box-shadow: 0 4px 8px 5px #989898;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #top-bar {
+        background-color: #1A237E;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+    }
+    
+    p {
+        color: white;
+        margin-inline-start: 67px;
+        position: absolute;
+        font-family: Century Gothic;
+        width: 50px;
+    }
+    
+    .barra-lateral {
+        background-color: #fff;
+        left: 0;
+        top: 83px;
+        height: 100%;
+        width: 345px;
+        border: none;
+        box-shadow: 0 4px 4px 2px #989898;
+        -moz-box-shadow: 0 4px 4px 2px #989898;
+        -webkit-box-shadow: 0 4px 8px 5px #989898;
+        position: absolute;
+        z-index: 1000;
+        flex-direction: column;
+        /* opacity: 0; */
+    }
+    
+    .album {
+        background-color: #fff;
+        position: relative;
+        height: 360px;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid #e0e0e0;
+        box-shadow: 0 4px 4px 2px #989898;
+        -moz-box-shadow: 0 4px 4px 2px #989898;
+        -webkit-box-shadow: 0 4px 8px 5px #989898;
+        width: 360px;
+    }
+    
+    .btn-container {
+        width: 50%;
+        min-width: 320px;
+        max-width: 650px;
+        height: 106px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fdfdfd;
+        border: none;
+        position: absolute;
+        margin: 0 auto;
+    }
+    
+    .disp-flex {
+        display: flex
+    }
+    
+    #audiotime {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #musicas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .timebar {
+        position: absolute;
+    }
+    
+    .barra-progresso {
+        width: 50%;
+        height: 8px;
+        min-width: 300px;
+        max-width: 550px;
+        margin: 0px 5px;
+    }
+    
+    #sidebar {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    #sidebar:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    #barraProgresso {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+    
+    #slide {
+        position: absolute;
+        border-radius: inherit;
+        top: 124px;
+        left: 41px;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        align-items: flex-start;
+        display: flex;
+        transition: all 0.5s;
+    }

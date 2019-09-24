@@ -35,9 +35,6 @@ var capadoAlbum;
 audio = document.getElementById('player');
 playlist = ["music/Red Hot Chili Peppers Snow (Hey oh) (HQ, HD Audio).mp3", "music/Shawn Mendes - Señorita Ft. Camila Cabello (Audio).mp3", "music/KVSH, Breno Rocha Feat. NoOne  - Sede Pra Te Ver.mp3", "music/Não Vou Mentir.mp3", "music/She Will Be Loved.mp3", "music/This Love - Maroon 5.mp3", "music/Wish You Were Here.mp3"]
 
-
-
-
 function play() {
     let btnPause = document.getElementById("pause");
     let btnPlay = document.getElementById("play1");
@@ -48,16 +45,18 @@ function play() {
         audio.src = player[i].music;
         playAudio();
 
+
     } else {
         btnPlay.style.display = "none";
     }
+
 }
 
 function duration() {
 
     var audio = document.getElementById("player");
     if (audio.readyState > 0) {
-        console.log("rodando");
+
         var minutes = parseInt(audio.duration / 60, 10);
         var seconds = parseInt(audio.duration % 60);
         document.getElementById('timeend').innerHTML = minutes + ":" + seconds;
@@ -72,7 +71,6 @@ function pause() {
         btnPlay.style.display = "block";
         btnPause.style.display = "none";
         audio.pause();
-
     } else {
         btnPlay.style.display = "none";
     }
@@ -110,7 +108,6 @@ function anterior() {
 
 }
 
-
 function aleatorio() {
     i = Math.floor(Math.random() * 4 + 0);
     document.getElementById("musicas").innerHTML = nome[i].musicas;
@@ -140,6 +137,12 @@ function playAudio() {
     };
 }
 
+// var tempo = document.getElementById("timestart");
+
+// var minutos = parseInt(player.tempo / 60);
+// var segundos = parseInt(player.temp % 60);
+// tempo.innerHTML = minutos + ':' + segundos;
+
 
 function mudaMusica(div) {
     let btnPause = document.getElementById("pause");
@@ -151,8 +154,8 @@ function mudaMusica(div) {
     audio.src = player[div.id].music;
     document.getElementById("musicas").innerHTML = nome[div.id].musicas;
     document.getElementById("capadoAlbum").src = album[div.id].cover;
+    document.getElementById("timeend").innerHTML = "ola";
     playAudio();
-
 }
 
 async function progresso() {
@@ -162,20 +165,19 @@ async function progresso() {
     var minutes = parseInt(tempoAtual / 60, 10);
     var seconds = parseInt(tempoAtual % 60);
     document.getElementById("timestart").innerHTML = minutes + ":" + seconds;
-    console.log("Atual: " + tempoAtual + " Total: = " + totalMusica);
+
     var poc = (tempoAtual * 100) / totalMusica;
-    console.log(poc);
+
     document.getElementById("barraProgresso").value = poc;
     setTimeout(function() {
         progresso();
     }, 1000);
 }
 
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
+function openNav() {
+    document.getElementById("barra").style.display = "block";
 }
-console.log("clicando", w3_open)
 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
+function closeNav() {
+    document.getElementById("barra").style.display = "none";
 }
