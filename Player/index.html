@@ -17,7 +17,7 @@
 
     <div class="container disp-flex">
 
-        <div id="blackdrop"></div>
+        <div id="blackdrop" style="display: none"></div>
 
 
         <div id="top-bar">
@@ -83,7 +83,7 @@
                             src="imagens/icons/anterior.png" width="35" height="35"></button>
                 </div>
 
-                <div class="btn5">
+                <!-- <div class="btn5">
                     <button style="border:none; background-color: white; display: block;" id="play1"
                         onclick="play()"><img src="imagens/icons/play.png" width="50" height="50"></button>
                 </div>
@@ -91,6 +91,12 @@
                 <div class="btn0">
                     <button style="border:none; background-color: white; display: none; " id="pause"
                         onclick="pause()"><img src="imagens/icons/pause.png" width="50" height="50"></button>
+                </div> -->
+                
+                <div class="btn5">
+                    <button style="border:none;background:none; display:block; outline: none" id="playPause" onClick="changePlay()">
+                        <img id="playButtonImg" src="imagens/icons/play.png" width="35" height="35"/>
+                    </button>
                 </div>
 
                 <div class="btn4">

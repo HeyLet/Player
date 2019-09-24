@@ -33,6 +33,7 @@ var i = 0;
 var nomeMusica = nome[i];
 var capadoAlbum;
 audio = document.getElementById('player');
+audioState = false;
 playlist = ["music/Red Hot Chili Peppers Snow (Hey oh) (HQ, HD Audio).mp3", "music/Shawn Mendes - Señorita Ft. Camila Cabello (Audio).mp3", "music/KVSH, Breno Rocha Feat. NoOne  - Sede Pra Te Ver.mp3", "music/Não Vou Mentir.mp3", "music/She Will Be Loved.mp3", "music/This Love - Maroon 5.mp3", "music/Wish You Were Here.mp3"]
 
 function play() {
@@ -44,12 +45,25 @@ function play() {
         btnPause.style.display = "block";
         audio.src = player[i].music;
         playAudio();
-
-
     } else {
         btnPlay.style.display = "none";
     }
 
+}
+
+function changePlay() {
+    let imagem = document.getElementById("playButtonImg");
+    let audio = document.getElementById("player");
+    if (audioState === false) {
+        audioState = true;
+        imagem.src = "imagens/icons/pause.png"
+        audio.src = player[i].music;
+        playAudio();
+    } else {
+        audioState = false;
+        imagem.src = "imagens/icons/play.png"
+        audio.pause();
+    }
 }
 
 function duration() {
@@ -137,13 +151,6 @@ function playAudio() {
     };
 }
 
-// var tempo = document.getElementById("timestart");
-
-// var minutos = parseInt(player.tempo / 60);
-// var segundos = parseInt(player.temp % 60);
-// tempo.innerHTML = minutos + ':' + segundos;
-
-
 function mudaMusica(div) {
     let btnPause = document.getElementById("pause");
     let btnPlay = document.getElementById("play1");
@@ -182,9 +189,5 @@ function changeNav() {
         document.getElementById("barra").style.display = "block"
         document.getElementById("blackdrop").style.display = "block"
     }
-
-}
-
-function closeNav() {
 
 }
