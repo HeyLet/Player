@@ -130,7 +130,7 @@ function repetir() {
 function playAudio() {
     audio = document.getElementById("player");
     audio.load();
-    audio.oncanplay = function() {
+    audio.oncanplay = function () {
         duration();
         audio.play();
         progresso();
@@ -169,15 +169,22 @@ async function progresso() {
     var poc = (tempoAtual * 100) / totalMusica;
 
     document.getElementById("barraProgresso").value = poc;
-    setTimeout(function() {
+    setTimeout(function () {
         progresso();
     }, 1000);
 }
 
-function openNav() {
-    document.getElementById("barra").style.display = "block";
+function changeNav() {
+    if (document.getElementById("barra").style.display == "block") {
+        document.getElementById("barra").style.display = "none";
+        document.getElementById("blackdrop").style.display = "none"
+    } else {
+        document.getElementById("barra").style.display = "block"
+        document.getElementById("blackdrop").style.display = "block"
+    }
+
 }
 
 function closeNav() {
-    document.getElementById("barra").style.display = "none";
+
 }
