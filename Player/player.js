@@ -144,7 +144,7 @@ function repetir() {
 function playAudio() {
     audio = document.getElementById("player");
     audio.load();
-    audio.oncanplay = function () {
+    audio.oncanplay = function() {
         duration();
         audio.play();
         progresso();
@@ -176,7 +176,7 @@ async function progresso() {
     var poc = (tempoAtual * 100) / totalMusica;
 
     document.getElementById("barraProgresso").value = poc;
-    setTimeout(function () {
+    setTimeout(function() {
         progresso();
     }, 1000);
 }
