@@ -146,6 +146,11 @@
             transition: 0.5s;
         }
         
+        #msc0:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
         #msc1:hover {
             text-decoration: underline;
             cursor: pointer;
@@ -178,5 +183,45 @@
         
         #msc7:hover {
             text-decoration: underline;
+            cursor: pointer;
+        }
+        /* #rangeValue {
+            position: absolute;
+            top: 2px;
+            width: 50%;
+            height: 8px;
+            min-width: 300px;
+            max-width: 550px;
+            margin: 0px 5px;
+            padding: 2px;
+            box-sizing: border-box;
+            background-color: #FFF;
+        }
+       */
+        
+        .range {
+            width: 400px;
+            height: 2px;
+            background: #111;
+            -webkit-appearance: none;
+            outline: none;
+            border-radius: 2px;
+        }
+        
+        .range:-webkit-slider-thumb {
+            -webkit-aparence: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #00bcd4;
+            appearance: none;
+            cursor: pointer;
+        }
+        
+        .range::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #00bcd4;
             cursor: pointer;
         }

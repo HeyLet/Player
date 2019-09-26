@@ -27,13 +27,13 @@
 
 
         <div id="barra" class="barra-lateral disp-flex">
-            <div id='msc1' onclick="mudaMusica(this)">Red Hot Chili Peppers Snow (Hey oh)</div>
-            <div id='msc2' onclick="mudaMusica(this)">Shawn Mendes - Señorita Ft. Camila Cabello</div>
-            <div id='msc3' onclick="mudaMusica(this)">KVSH, Breno Rocha Feat. NoOne- Sede Pra Te Ver</div>
-            <div id='msc4' onclick="mudaMusica(this)">Não Vou Mentir</div>
-            <div id="msc5" onclick="mudaMusica(this)">She Will Be Loved</div>
-            <div id='msc6' onclick="mudaMusica(this)">This Love - Maroon 5</div>
-            <div id='msc7' onclick="mudaMusica(this)">Wish You Were Here</div>
+            <div id='msc0' onclick="mudaMusica(this)">Red Hot Chili Peppers Snow (Hey oh)</div>
+            <div id='msc1' onclick="mudaMusica(this)">Shawn Mendes - Señorita Ft. Camila Cabello</div>
+            <div id='msc2' onclick="mudaMusica(this)">KVSH, Breno Rocha Feat. NoOne- Sede Pra Te Ver</div>
+            <div id='msc3' onclick="mudaMusica(this)">Não Vou Mentir</div>
+            <div id='msc4' onclick="mudaMusica(this)">She Will Be Loved</div>
+            <div id='msc5' onclick="mudaMusica(this)">This Love - Maroon 5</div>
+            <div id='msc6' onclick="mudaMusica(this)">Wish You Were Here</div>
         </div>
 
 
@@ -48,17 +48,28 @@
 
 
         <div id="audiotime">
-            <audio id="player">
-                Your browser does not support the audio tag.
+            <audio id="player">                
             </audio>
             <span id="timestart">0:00</span>
-            <progress id="barraProgresso" value="0" max="100" class="barra-progresso">
-            </progress>
 
-            <span id="timeend">0:00</span>
-            <div class="timebar">
-                <span id="time"></span></div>
+            <div>
+                <span id="rangeValue"></span>
+                <input type="range" class="range" name="" step="1" value="0.035956" aria-valuenow="0.035956" min="0" max="149" onmousemove=" rangeSlider (this.value)" onchange=" randSlider(this.value)">
 
+                <!-- <progress id="barraProgresso" value="0" max="100" class="barra-progresso">
+            </progress> -->
+
+
+
+
+
+
+
+
+                <span id="timeend">0:00</span>
+                <div class="timebar">
+                    <span id="time"></span></div>
+            </div>
 
         </div>
 

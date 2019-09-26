@@ -36,20 +36,7 @@ audio = document.getElementById('player');
 audioState = false;
 playlist = ["music/Red Hot Chili Peppers Snow (Hey oh) (HQ, HD Audio).mp3", "music/Shawn Mendes - Señorita Ft. Camila Cabello (Audio).mp3", "music/KVSH, Breno Rocha Feat. NoOne  - Sede Pra Te Ver.mp3", "music/Não Vou Mentir.mp3", "music/She Will Be Loved.mp3", "music/This Love - Maroon 5.mp3", "music/Wish You Were Here.mp3"]
 
-function play() {
-    let btnPause = document.getElementById("pause");
-    let btnPlay = document.getElementById("play1");
-    audio = document.getElementById("player");
-    if (btnPlay.style.display === "block") {
-        btnPlay.style.display = "none";
-        btnPause.style.display = "block";
-        audio.src = player[i].music;
-        playAudio();
-    } else {
-        btnPlay.style.display = "none";
-    }
 
-}
 
 function changePlay() {
     let imagem = document.getElementById("playButtonImg");
@@ -77,18 +64,6 @@ function duration() {
     }
 }
 
-
-function pause() {
-    let btnPause = document.getElementById("pause");
-    let btnPlay = document.getElementById("play1");
-    if (btnPause.style.display === "block") {
-        btnPlay.style.display = "block";
-        btnPause.style.display = "none";
-        audio.pause();
-    } else {
-        btnPlay.style.display = "none";
-    }
-}
 
 
 
@@ -152,17 +127,14 @@ function playAudio() {
 }
 
 function mudaMusica(div) {
-    let btnPause = document.getElementById("pause");
-    let btnPlay = document.getElementById("play1");
     audio = document.getElementById("player");
     audio.pause();
-    btnPlay.style.display = "none";
-    btnPause.style.display = "block";
-    audio.src = player[div.id].music;
-    document.getElementById("musicas").innerHTML = nome[div.id].musicas;
-    document.getElementById("capadoAlbum").src = album[div.id].cover;
-    document.getElementById("timeend").innerHTML = "ola";
-    playAudio();
+    var id = div.id.replace('msc', '');
+    audio.src = player[id].music;
+    document.getElementById("musicas").innerHTML = nome[id].musicas;
+    document.getElementById("capadoAlbum").src = album[id].cover;
+    document.getElementById("timeend").innerHTML = "time";
+    changePlay();
 }
 
 async function progresso() {
@@ -175,11 +147,16 @@ async function progresso() {
 
     var poc = (tempoAtual * 100) / totalMusica;
 
-    document.getElementById("barraProgresso").value = poc;
+    document.getElementById("rangeValue").value = poc;
     setTimeout(function() {
         progresso();
     }, 1000);
 }
+
+
+
+
+
 
 function changeNav() {
     if (document.getElementById("barra").style.display == "block") {
