@@ -98,7 +98,8 @@ function anterior() {
 }
 
 function aleatorio() {
-    i = Math.floor(Math.random() * 4 + 0);
+    audio = document.getElementById("player");
+    i = Math.floor(Math.random() * 7 + 0);
     document.getElementById("musicas").innerHTML = nome[i].musicas;
     document.getElementById("capadoAlbum").src = album[i].cover;
     p = 1;

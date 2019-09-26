@@ -33,7 +33,15 @@ var i = 0;
 var nomeMusica = nome[i];
 var capadoAlbum;
 audio = document.getElementById('player');
-playlist = ["music/Red Hot Chili Peppers Snow (Hey oh) (HQ, HD Audio).mp3", "music/Shawn Mendes - Señorita Ft. Camila Cabello (Audio).mp3", "music/KVSH, Breno Rocha Feat. NoOne  - Sede Pra Te Ver.mp3", "music/Não Vou Mentir.mp3", "music/She Will Be Loved.mp3", "music/This Love - Maroon 5.mp3", "music/Wish You Were Here.mp3"]
+playlist = [
+    "music/Red Hot Chili Peppers Snow (Hey oh) (HQ, HD Audio).mp3", 
+    "music/Shawn Mendes - Señorita Ft. Camila Cabello (Audio).mp3", 
+    "music/KVSH, Breno Rocha Feat. NoOne  - Sede Pra Te Ver.mp3",
+     "music/Não Vou Mentir.mp3", 
+     "music/She Will Be Loved.mp3", 
+     "music/This Love - Maroon 5.mp3", 
+     "music/Wish You Were Here.mp3"
+    ]
 
 
 
@@ -112,10 +120,10 @@ function anterior() {
 
 
 function aleatorio() {
-    i = Math.floor(Math.random() * 4 + 0);
+    audio = document.getElementById("player");
+    i = Math.floor(Math.random() * 7 + 0);
     document.getElementById("musicas").innerHTML = nome[i].musicas;
     document.getElementById("capadoAlbum").src = album[i].cover;
-    p = 1;
     audio.src = player[i].music;
     playAudio();
 }
